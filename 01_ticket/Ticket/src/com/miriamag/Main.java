@@ -33,7 +33,6 @@ public class Main {
 
         do {
 
-
             //pedir datos
 
             System.out.println("Introduzca el producto: ");
@@ -55,7 +54,6 @@ public class Main {
 
             System.out.println("¿Otro? (s/n)");
             otro = br.readLine().charAt(0);
-
 
         } while (otro != 'n');
         t.imprimir();
