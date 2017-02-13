@@ -1,6 +1,7 @@
 package com.miriamag;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by 7FPROG11 on 09/02/2017.
@@ -12,7 +13,8 @@ public class Empresa {
 
     //asociacion lado 1.
 
-    private ArrayList<Empleado> empleados = new ArrayList<>();
+    private List<Empleado> empleados = new ArrayList<>();
+
 
     public String getNombre() {
         return nombre;
@@ -42,7 +44,7 @@ public class Empresa {
         empleado.setEmpresa(this);
     }
 
-    public ArrayList<Empleado> getEmpleados() {
+    public List<Empleado> getEmpleados() {
         return empleados;
     }
 
@@ -50,18 +52,28 @@ public class Empresa {
         this.empleados = empleados;
     }
 
-    public void listaEmpleados(){
-        for (Empleado ea:empleados) {
 
-            System.out.println("Nombre: "+ea.getNombre());
-            System.out.println("Apellido: "+ea.getApellidos());
-            System.out.println("Fecha nacimiento: "+ea.getFechaNacimiento());
-            System.out.println("Fecha Contrato: "+ea.getFechaContrato());
-
-        }
-
+    @Override
+    public String toString() {
+        return "Empresa{" +
+                "nombre='" + nombre + '\'' +
+                ", anyoFundacion='" + anyoFundacion + '\'' +
+                '}';
     }
 
+    public void visualizarEmpresa(){
+        System.out.println("Datos de la empresa: "+nombre);
+        System.out.println("Año de fundación: "+anyoFundacion);
+        System.out.println("Lista de empleados: ");
 
+        for (Empleado e :empleados) {
+            System.out.println("Nombre: "+e.getNombre());
+            System.out.println("Apellido: "+e.getApellidos());
+            System.out.println("Fecha nacimiento: "+e.getFechaNacimiento());
+            System.out.println("Fecha Contrato: "+e.getFechaContrato());
+
+
+        }
+    }
 
 }
