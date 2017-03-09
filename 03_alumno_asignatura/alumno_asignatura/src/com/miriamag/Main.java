@@ -1,6 +1,5 @@
 package com.miriamag;
 
-import jdk.nashorn.internal.objects.NativeUint8Array;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -106,6 +105,7 @@ public class Main {
                 }else{
                     System.out.println("No hay asignaturas.");
                 }
+                //estructura de control, si no han puesto nada, no se añade
 
                 if( alumno != null && asignatura != null ) {
                     alumno.getAsignaturas().add(asignatura);
@@ -115,7 +115,7 @@ public class Main {
                 break;
             case 4:
                 //listado de alumnos matriculados en una asignatura
-                
+
 
                 break;
             case 5:
